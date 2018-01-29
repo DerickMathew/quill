@@ -84,7 +84,7 @@ class Picker {
     }
     if (trigger) {
       if (typeof Event === 'function') {
-        this.select.dispatchEvent(new Event('change'));
+        this.select.dispatchEvent(new CustomEvent('change'));
       } else if (typeof Event === 'object') {     // IE11
         let event = document.createEvent('Event');
         event.initEvent('change', true, true);

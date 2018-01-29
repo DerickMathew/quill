@@ -2,7 +2,7 @@ import Quill from './core';
 
 import { AlignClass, AlignStyle } from './formats/align';
 import { DirectionAttribute, DirectionClass, DirectionStyle } from './formats/direction';
-import { IndentClass as Indent } from './formats/indent';
+import { IndentClass, IndentStyle } from './formats/indent';
 
 import Blockquote from './formats/blockquote';
 import Header from './formats/header';
@@ -54,6 +54,7 @@ Quill.register({
   'attributors/style/color': ColorStyle,
   'attributors/style/direction': DirectionStyle,
   'attributors/style/font': FontStyle,
+  'attributors/style/indent': IndentStyle,
   'attributors/style/size': SizeStyle
 }, true);
 
@@ -61,7 +62,7 @@ Quill.register({
 Quill.register({
   'formats/align': AlignClass,
   'formats/direction': DirectionClass,
-  'formats/indent': Indent,
+  'formats/indent': IndentClass,
 
   'formats/background': BackgroundStyle,
   'formats/color': ColorStyle,
